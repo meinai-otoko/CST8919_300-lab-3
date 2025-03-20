@@ -4,8 +4,8 @@ In this lab, we set up Grafana to interface with Azure Monitor using Managed Ide
 ## Screenshot of the Steps
 1. VM Overview in Azure displays information about the virtual machine (VM) established for the lab, such as its status, resource group, location, and subscription.
 ![Screenshot 1](screenshot1.PNG)
-   
-3. Starting Grafana Service and verifying that the Grafana service has been successfully activated and is operating on the virtual machine.
+2. Starting Grafana Service and verifying that the Grafana service has been successfully activated and is operating on the virtual machine.
+![Screenshot 2](screenshot2.PNG)
 4. Grafana Login Page – Accessing the Grafana web interface through the browser using the assigned public IP and port.
 5. Updating Grafana Password – Prompted to change the default Grafana admin password for security purposes.
 6. Enabling System-Assigned Managed Identity – Configuring the VM to use a system-assigned managed identity for secure authentication.
