@@ -6,14 +6,20 @@ In this lab, we set up Grafana to interface with Azure Monitor using Managed Ide
 ![Screenshot 1](screenshot1.PNG)
 2. Starting Grafana Service and verifying that the Grafana service has been successfully activated and is operating on the virtual machine.
 ![Screenshot 2](screenshot2.PNG)
-4. Grafana Login Page – Accessing the Grafana web interface through the browser using the assigned public IP and port.
-5. Updating Grafana Password – Prompted to change the default Grafana admin password for security purposes.
-6. Enabling System-Assigned Managed Identity – Configuring the VM to use a system-assigned managed identity for secure authentication.
-7. Assigning Monitoring Reader Role – Granting the necessary permissions to the VM for Azure Monitor integration.
-8. Assigning Reader Role at Subscription Level – Providing the VM with read access to resources within the Azure subscription.
-9. Reviewing Azure Role Assignments – Listing all assigned roles for the VM under the Azure for Students subscription.
-10. Configuring Azure Monitor as a Data Source in Grafana – Setting up authentication and selecting the Azure subscription for monitoring.
-11. Successful Connection to Azure Monitor – Confirming that Grafana successfully connected to Azure Monitor and is ready to visualize data.
+3. Grafana Login Page – Accessing the Grafana web interface through the browser using the assigned public IP and port.
+![Screenshot 3](screenshot3.PNG)
+4. Updating Grafana Password – Prompted to change the default Grafana admin password for security purposes.
+![Screenshot 4](screenshot4.PNG)
+5. Enabling System-Assigned Managed Identity – Configuring the VM to use a system-assigned managed identity for secure authentication.
+![Screenshot 5](screenshot5.PNG)
+6. Assigning Monitoring Reader Role – Granting the necessary permissions to the VM for Azure Monitor integration.
+![Screenshot 6](screenshot6.PNG)
+7. Assigning Reader Role at Subscription Level – Providing the VM with read access to resources within the Azure subscription.
+![Screenshot 7](screenshot7.PNG)
+12. Reviewing Azure Role Assignments – Listing all assigned roles for the VM under the Azure for Students subscription.
+![Screenshot 8](screenshot8.PNG)
+14. Configuring Azure Monitor as a Data Source in Grafana – Setting up authentication and selecting the Azure subscription for monitoring.
+15. Successful Connection to Azure Monitor – Confirming that Grafana successfully connected to Azure Monitor and is ready to visualize data.
 ## Results
 During this lab, we successfully installed and configured Grafana on an Ubuntu server, and then integrated it with Azure Monitor to visualize system performance data. However, we ran into a few problems, including permission issues while modifying the grafana.ini file, which were fixed by adjusting file permissions and utilizing sudo privileges.The Grafana service originally failed to start due to database permissions concerns, which we resolved by changing the ownership of the data directory and restarting the service.  Authentication problems in Azure Monitor were resolved by checking and assigning the appropriate Managed Identity roles, whilst the subscription loading issue was resolved by refreshing the configurations and ensuring the VM had the relevant rights.  Furthermore, the Grafana web interface was initially unreachable due to firewall constraints, which we resolved by permitting traffic on port 3000 via the firewall and Azure Network Security Groups (NSG).  Finally, to resolve the "No Log Analytics Workspaces Found" error, confirm active workspaces in Azure and ensure proper settings. We successfully resolved these issues through systematic troubleshooting, resulting in a fully functional Grafana setup that displays real-time performance insights from Azure Monitor.
 ## Conlusion
