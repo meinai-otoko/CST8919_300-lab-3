@@ -35,7 +35,15 @@ In this lab, we set up Grafana to interface with Azure Monitor using Managed Ide
 11. Successful Connection to Azure Monitor – Confirming that Grafana successfully connected to Azure Monitor and is ready to visualize data.
 ![Screenshot 10](screenshot10.PNG)
 
-12. 
+12. A pre-configured dashboard is displayed for tracking CPU, memory, and network consumption.
+![Screenshot 11](screenshot11.PNG)
+13. A detailed view of the Grafana dashboard tracking network usage over time, displaying data in megabytes.
+![Screenshot 12](screenshot12.PNG)
+14. A real-time graph visualizing CPU credits consumption for the monitored system, helping track CPU efficiency over time.
+![Screenshot 13](screenshot13.PNG)
+15. A visual representation of CPU usage as a percentage, showing spikes and trends over a selected time range.
+![Screenshot 14](screenshot14.PNG)
+
 ## Results
 During this lab, we successfully installed and configured Grafana on an Ubuntu server, and then integrated it with Azure Monitor to visualize system performance data. However, we ran into a few problems, including permission issues while modifying the grafana.ini file, which were fixed by adjusting file permissions and utilizing sudo privileges.The Grafana service originally failed to start due to database permissions concerns, which we resolved by changing the ownership of the data directory and restarting the service.  Authentication problems in Azure Monitor were resolved by checking and assigning the appropriate Managed Identity roles, whilst the subscription loading issue was resolved by refreshing the configurations and ensuring the VM had the relevant rights.  Furthermore, the Grafana web interface was initially unreachable due to firewall constraints, which we resolved by permitting traffic on port 3000 via the firewall and Azure Network Security Groups (NSG).  Finally, to resolve the "No Log Analytics Workspaces Found" error, confirm active workspaces in Azure and ensure proper settings. We successfully resolved these issues through systematic troubleshooting, resulting in a fully functional Grafana setup that displays real-time performance insights from Azure Monitor.
 ## Conlusion
